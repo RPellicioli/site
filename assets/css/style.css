@@ -936,21 +936,18 @@ a:link, a:visited, a:hover, a:active {
 	}
 
 	.slide-img-0{
-		background: url('../img/ezoom-1.jpg');
 		background-size: 120% 100%;
 		background-position: center left;
 		zoom:1.1;
 	}
 
 	.slide-img-1{
-		background: url('../img/ezoom-2.jpg');
 		background-size: 140% 110%;
 		background-position: center center;
 		zoom:1.1;
 	}
 
 	.slide-img-2{
-		background: url('../img/ezoom-3.jpg');
 		background-size: 140% 110%;
 		background-position: center center;
 		zoom:1.1;
