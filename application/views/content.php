@@ -20,7 +20,7 @@
 					Uma agência disruptiva que transforma ideias em inovação e impacta pessoas em todos os ambientes para que se integrem às marcas.
 				</p>
 
-				<a href="#" class="btn-default flex justify-center v-center">Conheça a nova Ezoom</a>
+				<a href="#" class="btn-default flex justify-center v-center">Conheça a empresa</a>
 			</div>
 
 			<div id="mobile-slider">
@@ -30,7 +30,7 @@
 			<div id="content-slide-text" class="flex column justify-center v-start">
 				<div class="box-slide-text flex column justify-center v-start">
 					<div>
-						<span>18</span> anos
+						<span>9</span> anos
 					</div>
 
 					<span>de experiência digital</span>
@@ -38,10 +38,10 @@
 
 				<div class="box-slide-text flex column justify-center v-start">
 					<div>
-						<span>60</span> profissionais
+						<span>1</span> profissional
 					</div>
 
-					<span>a maior agência da serra</span>
+					<span>a maior agência de um só profissional (kewk)</span>
 				</div>
 			</div>
 		</div>
@@ -54,14 +54,14 @@
 	</div>	
 </section>
 
-<section id="video">
+<!-- <section id="video">
 	<div id="mask-video" class="flex justify-center v-center">
-		<img class="icon-play" src="<?php echo base_url('assets/img/play.svg') ?>" />
+		<img class="icon-play" src="<?php //echo base_url('assets/img/play.svg') ?>" />
 	</div>
 	<iframe style="width: 100%;height: 100%;border:0;" 
 	src="https://www.youtube.com/embed/hL93jeW46hY">
 	</iframe>
-</section>
+</section> -->
 
 <section id="services" class="flex column justify-start v-start">
 	<div class="flex width-full justify-between v-start">
@@ -166,29 +166,29 @@
 	<div id="depositions-right" class="flex justify-between v-start">
 		<div class="flex column justify-start v-start">
 			<p>
-				Trabalhamos com a Ezoom há alguns anos, com base em um relacionamento construído a cada projeto. Pelos sucessos obtidos, hoje é um dos nossos parceiros em Marketing Digital, que desenvolve trabalhos relevantes com demandas específicas. Alguns aspectos que mantêm a parceria são a qualidade no atendimento, o comprometimento, as ideias inovadoras e a velocidade de implantação que o nosso segmento e esse tipo de demanda requerem."
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacus ex, viverra tincidunt fringilla vel, consectetur eu dolor. Praesent eu nunc sit amet nisi ultrices interdum. Fusce eget fringilla velit. Vivamus dictum eros at ipsum consequat, non tincidunt dui tempus."
 			</p>
 
-			<span class="name-dep">André Pires</span>
+			<span class="name-dep">Ricardo Pellicioli</span>
 			<span class="function-dep">
-				Gerente de Comunicação e Marketing - Grupo Legrand - São Paulo/SP
+				Gerente de Comunicação e Marketing - Google - São Paulo/SP
 			</span>
 		</div>
 		<div class="flex column justify-start v-start">
 			<p>
-				Trabalhamos com a Ezoom há alguns anos, com base em um relacionamento construído a cada projeto. Pelos sucessos obtidos, hoje é um dos nossos parceiros em Marketing Digital, que desenvolve trabalhos relevantes com demandas específicas. Alguns aspectos que mantêm a parceria são a qualidade no atendimento, o comprometimento, as ideias inovadoras e a velocidade de implantação que o nosso segmento e esse tipo de demanda requerem."
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacus ex, viverra tincidunt fringilla vel, consectetur eu dolor. Praesent eu nunc sit amet nisi ultrices interdum. Fusce eget fringilla velit. Vivamus dictum eros at ipsum consequat, non tincidunt dui tempus."
 			</p>
 
-			<span class="name-dep">André Pires</span>
+			<span class="name-dep">Ricardo Pellicioli</span>
 			<span class="function-dep">
-				Gerente de Comunicação e Marketing - Grupo Legrand - São Paulo/SP
+				Gerente de TI - Google - São Paulo/SP
 			</span>
 		</div>
 	</div>
 </section>
 
 <div id="customers" class="flex justify-center v-start wrap">
-	<?php for($j = 0; $j < 35; ++$j):?>
+	<?php for($j = 0; $j < 10; ++$j):?>
 		<div class="box-customer">
 			<img src="<?php echo base_url('assets/img/customer-'. $j .'.png') ?>" />
 		</div>

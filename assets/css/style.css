@@ -63,15 +63,22 @@ a:link, a:visited, a:hover, a:active {
 	transition: .15s;
 	box-sizing: border-box;
 	margin: 0px 1rem;
-	font-size: 13px;
+	font-size: 15px;
 	line-height: 80%;
 	font-weight: 700;
 	opacity: 0.7;
 }
 
 .content-menu > div > nav > a:hover{
-	color: #5c0091;
+	color: #A7C6DA;
 	opacity: 1;
+}
+
+.logo{
+	color: #A7C6DA;
+	font-family: 'Russo One', sans-serif;
+	font-size: 28px;
+	line-height: 26px;
 }
 
 #logo-menu{
@@ -89,7 +96,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 #box-main-title{
-	background: linear-gradient(45deg,#8f11b5 0,#45047e 100%);
+	background: linear-gradient(45deg,#A7C6CD 0,#A7C6FF 100%);
 	padding: 3.5rem 1.8rem;
 	height: 50%;
 	-webkit-box-flex: 1;
@@ -97,7 +104,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 	#box-main-title p{
-		font-size: 13px;
+		font-size: 15px;
 		color: #FFFFFF;
 		font-weight: 400;
     	line-height: 1.4;
@@ -145,18 +152,17 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .slide-img-0{
-	background: url('../img/ezoom-1.jpg');
+	background: url('../img/banner-01.jpg');
 	background-size: 100% 100%;
 	background-position: center left;
 	zoom:1.1;
+	filter: grayscale(0.9);
 }
 
 .slide-img-1{
-	background: url('../img/ezoom-2.jpg') center center;
-}
-
-.slide-img-2{
-	background: url('../img/ezoom-3.jpg') center center;
+	background: url('../img/banner-02.jpg');
+	background-size: cover;
+	filter: grayscale(0.9);
 }
 
 #content-slide-text{
@@ -229,7 +235,7 @@ a:link, a:visited, a:hover, a:active {
 #depositions{
 	margin: 0px 64px;
 	padding: 100px 40px;
-	border-bottom: 4px solid #5c0091;
+	border-bottom: 4px solid #A7C6DA;
 	font-size: 1.1rem;
     color: #666;
     font-weight: 400;
@@ -290,7 +296,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 #footer{
-	background-image: linear-gradient(-130deg,#8f11b5 0,#45047e 100%);
+	background-image: linear-gradient(-130deg,#A7C6CD 0,#A7C6FF 100%);
     padding: 190px 100px 140px;
     position: relative;
 }
@@ -363,7 +369,7 @@ a:link, a:visited, a:hover, a:active {
 	display: none;
 	width: calc(100% - 48px);
 	padding: 0px 24px;
-	background: #transparent;
+	background: transparent;
 }
 
 .menu-mobile-scroll{
@@ -375,7 +381,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .form-contact > span{
-	font-size: 13px;
+	font-size: 15px;
     font-size: 1.3rem;
     color: #fff;
     letter-spacing: -1px;
@@ -446,7 +452,7 @@ a:link, a:visited, a:hover, a:active {
 .box-contact-footer > span{
 	font-size: 10px;
     font-size: 1.0rem;
-    color: #c093d1;
+    color: #FFF;
     display: block;
     margin: 6px 0px 10px;
 }
@@ -582,7 +588,7 @@ a:link, a:visited, a:hover, a:active {
 /* buttons */
 
 .btn-default{
-	font-size: 13px;
+	font-size: 15px;
     zoom: 1;
     -webkit-animation: fadeInLeft 1s 3.5s forwards;
     -moz-animation: fadeInLeft 1s 3.5s forwards;
@@ -602,7 +608,7 @@ a:link, a:visited, a:hover, a:active {
 
 	.btn-default:hover{
 	    border: 2px solid #fff;
-	    color: #5c0091 !important;
+	    color: #A7C6DA !important;
 	    background: #fff;
 	}
 
@@ -652,7 +658,7 @@ a:link, a:visited, a:hover, a:active {
 	position: relative;
 	transition: .3s;
 	right: 0px;
-	top: -80px;
+	transform: translateX(30px) translateY(-30px);
 	opacity: 0;
 }
 
@@ -742,7 +748,7 @@ a:link, a:visited, a:hover, a:active {
 	#footer{
 		flex-direction: column;
 		align-items: center;
-	    background-image: linear-gradient(-45deg,#8f11b5 0,#45047e 100%);
+	    background-image: linear-gradient(-45deg,#A7C6CD 0,#A7C6FF 100%);
     	padding: 4.6rem 0rem;
 	}
 
@@ -791,7 +797,7 @@ a:link, a:visited, a:hover, a:active {
 
 	.box-contact-footer > span{
 	    font-size: 0.9rem;
-	    color: #c093d1;
+	    color: #FFF;
 	    margin-top: 6px;
 	    max-width: 90%;
 	    text-align: center;
@@ -869,7 +875,7 @@ a:link, a:visited, a:hover, a:active {
 	}
 
 	.btn-contact > span{
-		font-size: 13px;
+		font-size: 15px;
 	    font-size: 1.3rem;
 	}
 

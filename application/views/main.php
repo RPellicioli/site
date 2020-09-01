@@ -13,10 +13,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="Description" content="Ezoom Description">
     <meta name="keywords" content="agência, web, etc">
 
-    <title>ezoom. - agência onlife</title>
+    <title>E - Ricardo Pellicioli</title>
 
 	<link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('assets/img/favicon.ico') ?>">
 	<link href="https://fonts.googleapis.com/css?family=Barlow:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/style.css') ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/flex.css') ?>">
 </head>
@@ -60,35 +61,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						Caxias do Sul - RS
 					</h6>
 
-					<span>Rua Domingos Oliva dos Santos, 90 I Bairro: Sanvitto I Cep: 95012-320</span>
+					<span>Rua Luiz Cavion, 1252 Bairro: Desvio Rizzo Cep: 95110-022</span>
 
 					<div class="flex justify-start v-center width-full">
-						<a href="" class="footer-sub-title footer-phone">(54) 3028 2220</a>
-						<a href="" class="footer-sub-title footer-phone"><i></i>(54) 9 9902 2220</a>
-					</div>
-				</div>
-
-				<div class="box-contact-footer flex column justify-start v-start width-full">
-					<h6 class="footer-sub-title">
-						Curitiba - PR
-					</h6>
-
-					<span>Av. Rep. Argentina, 1160 I Bairro: Água Verde I Cep: 80620-010</span>
-
-					<div class="flex justify-start v-center width-full">
-						<a href="" class="footer-sub-title footer-phone">(41) 3206 0056</a>
-					</div>
-				</div>
-
-				<div class="box-contact-footer flex column justify-start v-start width-full">
-					<h6 class="footer-sub-title">
-						Porto Alegre - RS
-					</h6>
-
-					<span>Rua Sete de Abril, 436 I Bairro: Floresta I Cep: 90220-130</span>
-
-					<div class="flex justify-start v-center width-full">
-						<a href="" class="footer-sub-title footer-phone">(51) 9 9936 2220</a>
+						<a href="" class="footer-sub-title footer-phone">(54) 3028 9999</a>
+						<a href="" class="footer-sub-title footer-phone"><i></i>(54) 9 9999 9999</a>
 					</div>
 				</div>
 
