@@ -2,6 +2,7 @@
 	<?php $this->load->view('menu'); ?>
 </div>
 <div id="slider">
-	<div class="img_0 slide-img-0 show-img cntimg"></div>
-	<div class="img_1 slide-img-1 cntimg"></div>
+	<?php foreach($banners as $key => $banner){ ?>
+		<div class="img_<?php echo $key; ?> slide-img-<?php echo $key; ?> cntimg <?php echo $key == 0 ? "show-img" : ""; ?>"></div>
+	<?php } ?>
 </div>

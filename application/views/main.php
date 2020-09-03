@@ -27,7 +27,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<?php $this->load->view('menu'); ?>
 		</header>
 
-		<?php $this->load->view('content'); ?>
+		<?php $this->load->view('content', array(
+			'banners' => $banners
+		)); ?>
 
 		<footer id="footer" class="flex justify-start v-start">
 			<div id="footer-left" class="flex column justify-start v-start">	

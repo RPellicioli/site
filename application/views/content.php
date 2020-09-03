@@ -24,7 +24,11 @@
 			</div>
 
 			<div id="mobile-slider">
-				<?php $this->load->view('slider'); ?>
+				<?php 
+					$this->load->view('slider',array(
+						'banners' => $banners
+					)); 
+				?>
 			</div>
 
 			<div id="content-slide-text" class="flex column justify-center v-start">
