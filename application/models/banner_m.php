@@ -1,6 +1,6 @@
 <?php
 
-class Food_m extends CI_Model {
+class Banner_m extends CI_Model {
     public $table = 'banner';
     public $table_file = 'file';
     public $primary_key = 'id';
@@ -10,8 +10,7 @@ class Food_m extends CI_Model {
 
         $this->db->select('banner.id, banner.title, file.file, file.path')
             ->from($this->table.' as banner')
-            ->join($this->table_file.' as file', 'food.imageId'.' = file.id', 'inner')
-            ->where('banner.status = 1')
+            ->join($this->table_file.' as file', 'banner.imageId'.' = file.id', 'inner')
             ->order_by('banner.title', 'ASC');
 
         if($id)

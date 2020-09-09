@@ -11,10 +11,14 @@ class Main extends CI_Controller {
 	public function index()
 	{
 		$this->load->model('banner_m');
+		$this->load->model('partner_m');
+
 		$banners = $this->banner_m->get();
+		$partners = $this->partner_m->get();
 
 		$this->load->view('main', array(
-			'banners' => $banners
+			'banners' => $banners,
+			'partners' => $partners
 		));
 	}
 }

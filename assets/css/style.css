@@ -144,25 +144,13 @@ a:link, a:visited, a:hover, a:active {
 	position: absolute;
 	top: 0px;
 	left: 0px;
+	filter: grayscale(0.9);
+	background-size: cover;
 }
 
 .show-img{
 	opacity: 1 !important;
 	z-index: 1 !important;
-}
-
-.slide-img-0{
-	background: url('../img/banner-01.jpg');
-	background-size: 100% 100%;
-	background-position: center left;
-	zoom:1.1;
-	filter: grayscale(0.9);
-}
-
-.slide-img-1{
-	background: url('../img/banner-02.jpg');
-	background-size: cover;
-	filter: grayscale(0.9);
 }
 
 #content-slide-text{
@@ -352,12 +340,22 @@ a:link, a:visited, a:hover, a:active {
 	width: 36px;
 	height: 36px;
 	margin-right: 10px;
+	transition: .3s ease-in-out;
+}
+
+.icon-face:hover{
+	transform: translateY(-3px);
 }
 
 .icon{
 	width: 32px;
 	height: 32px;
 	margin-right: 10px;
+	transition: .3s ease-in-out;
+}
+
+.icon:hover{
+	transform: translateY(-3px);
 }
 
 .icon-menu{
@@ -477,7 +475,10 @@ a:link, a:visited, a:hover, a:active {
     min-width: 300px;
     max-height: 305px;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+	background-size: 100% 100%;
+	display: block;
+	outline: none;
+	cursor: pointer;
 }
 
 .content-card{
@@ -514,22 +515,6 @@ a:link, a:visited, a:hover, a:active {
     height: .8em;
     width: .8em;
     background: #8f11b5;
-}
-
-.card-1{
-	background-image: url('../img/marcopolo.jpg');
-}
-
-.card-2{
-	background-image: url('../img/rodoil.jpg');
-}
-
-.card-3{
-	background-image: url('../img/iguatemi.jpg');
-}
-
-.card-4{
-	background-image: url('../img/gedore.jpg');
 }
 
 /* titles */
