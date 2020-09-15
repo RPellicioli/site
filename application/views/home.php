@@ -1,3 +1,5 @@
+<?php $this->load->view('header'); ?>
+
 <section id="content-header" class="flex width-full height-full justify-start v-start">
 	<div class="box-content-header flex v-start justify-start height-full width-full">
 		<div class="menu-mobile justify-between v-center">
@@ -106,7 +108,7 @@
 	<?php for($i = 0; $i < 4; $i++){ ?>
 		<a href="<?php echo $partners[$i]->url ?>" target="_blank" class="card" style="background-image: url('<?php echo base_url('assets/img/' . $partners[$i]->file); ?>')">
 			<div class="content-card flex column justify-between v-start">
-				<h3 class="card-title"><?php echo $partners[$i]->title ?></h3>
+				<h3 class="card-title"><?php echo $partners[$i]->name ?></h3>
 				<div class="card-text flex column justify-start v-start">
 					<span><?php echo $partners[$i]->description ?></span>
 				</div>
@@ -126,26 +128,18 @@
 	</div>
 
 	<div id="depositions-right" class="flex justify-between v-start">
-		<div class="flex column justify-start v-start">
-			<p>
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacus ex, viverra tincidunt fringilla vel, consectetur eu dolor. Praesent eu nunc sit amet nisi ultrices interdum. Fusce eget fringilla velit. Vivamus dictum eros at ipsum consequat, non tincidunt dui tempus."
-			</p>
+		<?php foreach($testimonies as $key => $testimony){ ?>
+			<div class="flex column justify-start v-start">
+				<p>
+					<?php echo $testimony->description; ?>
+				</p>
 
-			<span class="name-dep">Ricardo Pellicioli</span>
-			<span class="function-dep">
-				Gerente de Comunicação e Marketing - Google - São Paulo/SP
-			</span>
-		</div>
-		<div class="flex column justify-start v-start">
-			<p>
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacus ex, viverra tincidunt fringilla vel, consectetur eu dolor. Praesent eu nunc sit amet nisi ultrices interdum. Fusce eget fringilla velit. Vivamus dictum eros at ipsum consequat, non tincidunt dui tempus."
-			</p>
-
-			<span class="name-dep">Ricardo Pellicioli</span>
-			<span class="function-dep">
-				Gerente de TI - Google - São Paulo/SP
-			</span>
-		</div>
+				<span class="name-dep"><?php echo $testimony->name; ?></span>
+				<span class="function-dep">
+					<?php echo $testimony->occupation; ?>
+				</span>
+			</div>
+		<?php } ?>
 	</div>
 </section>
 
@@ -156,3 +150,5 @@
 		</a>
     <?php }?> 	
 </div>
+
+<?php $this->load->view('footer'); ?>

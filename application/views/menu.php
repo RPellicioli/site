@@ -6,7 +6,7 @@
 	</a>
 	<div class="hide-mobile flex justify-start v-center">
 		<nav class="flex justify-start v-center">
-			<a href="#">admin</a>
+			<a href="<?php echo base_url('/admin'); ?>">admin</a>
 		</nav>
 
 		<div class="flex justify-start v-center">
