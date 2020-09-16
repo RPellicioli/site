@@ -1,4 +1,4 @@
-<form class="common-form" action="<?php echo base_url('admin/partner/save' . $partner[0]->id); ?>" method="POST">
+<form class="common-form" action="<?php echo base_url('admin/partners/save/' . $partner[0]->id); ?>" method="POST">
     <div class="flex column">
         <label>
             Nome
@@ -30,7 +30,6 @@
         <input type="file" id="file" name="file"/>
     </div>
     
-
     <div class="buttons flex justify-end v-center margin-top-24">
         <button type="submit" class="button save">
             Salvar

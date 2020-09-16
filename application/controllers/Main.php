@@ -19,10 +19,12 @@ class Main extends CI_Controller {
 		$partners = $this->partner_m->get();
 		$testimonies = $this->testimony_m->get();
 
+		shuffle($testimonies);
+
 		$this->load->view('main', array(
 			'banners' => $banners,
 			'partners' => $partners,
-			'testimonies' => $testimonies,
+			'testimonies' => array_slice($testimonies, 0, 2),
 			'content' => 'home'
 		));		
 	}
@@ -74,34 +76,34 @@ class Main extends CI_Controller {
 		}
 	}
 
-	public function list($page){
+	public function list($page, $message = FALSE){
 		if($this->logged()){
 			switch($page){
 				case "banners":
 					$this->load->model('banner_m');
 					$list = $this->banner_m->get();
 					$links = array(
-						'edit' => 'admin/banner/editar/',
-						'delete' => 'admin/banner/delete/',
-						'new' => 'admin/banner/criar/'
+						'edit' => 'admin/banners/editar/',
+						'delete' => 'admin/lista/banners/delete/',
+						'new' => 'admin/banners/criar/'
 					);
 				break;
 				case "depoimentos":
 					$this->load->model('testimony_m');
 					$list = $this->testimony_m->get();
 					$links = array(
-						'edit' => 'admin/depoimento/editar/',
-						'delete' => 'admin/depoimento/delete/',
-						'new' => 'admin/depoimento/criar/'
+						'edit' => 'admin/depoimentos/editar/',
+						'delete' => 'admin/lista/depoimentos/delete/',
+						'new' => 'admin/depoimentos/criar/'
 					);
 				break;
 				case "parceiros":
 					$this->load->model('partner_m');
 					$list = $this->partner_m->get();
 					$links = array(
-						'edit' => 'admin/parceiro/editar/',
-						'delete' => 'admin/parceiro/delete/',
-						'new' => 'admin/parceiro/criar/'
+						'edit' => 'admin/parceiros/editar/',
+						'delete' => 'admin/lista/parceiros/delete/',
+						'new' => 'admin/parceiros/criar/'
 					);
 				break;
 				default:
@@ -116,9 +118,30 @@ class Main extends CI_Controller {
 				'container' => 'list',
 				'list' => $list,
 				'links' => $links,
+				'message' => $message,
 				'user' => $_SESSION['user']
 			));		
 		}
+	}
+
+	public function list_delete($page, $id){
+		switch($page){
+			case "banners":
+				$this->load->model('banner_m');
+				$this->banner_m->delete($id);
+			break;
+			case "depoimentos":
+				$this->load->model('testimony_m');
+				$this->testimony_m->delete($id);
+			break;
+			case "parceiros":
+				$this->load->model('partner_m');
+				$this->partner_m->delete($id);
+			break;
+		}
+
+		
+		$this->list($page, "Deletado com sucesso!");	
 	}
 
 	public function banner($id){
@@ -151,6 +174,21 @@ class Main extends CI_Controller {
 			'testimony' => $testimony,
 			'user' => $_SESSION['user']
 		));	
+	}
+
+	public function testimony_save($id = FALSE){
+		$data = $this->input->post();
+
+		$this->load->model('testimony_m');
+
+		if($id){
+			$this->testimony_m->update($data, $id);
+		}
+		else{
+			$this->testimony_m->insert($data);
+		}
+
+		$this->list("depoimentos", "Salvo com sucesso!");
 	}
 
 	public function partner($id){

@@ -1,4 +1,4 @@
-<form class="common-form" action="<?php echo base_url('admin/testimony/save' . $testimony[0]->id); ?>" method="POST">
+<form class="common-form" action="<?php echo base_url('admin/depoimentos/salvar/' . $testimony[0]->id); ?>" method="POST">
     <div class="flex column">
         <label>
             Nome

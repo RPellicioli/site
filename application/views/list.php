@@ -1,4 +1,10 @@
 <section class="internal-list-container">
+    <?php if($message) { ?>
+        <div class="message-alert">
+            <?php echo $message; ?>
+        </div>
+    <?php } ?>
+
     <header class="flex header-list-admin justify-start v-center">
         <div class="w-80">
             Título

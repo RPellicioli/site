@@ -1,4 +1,4 @@
-<form class="common-form" action="<?php echo base_url('admin/banner/save' . $banner[0]->id); ?>" method="POST">
+<form class="common-form" action="<?php echo base_url('admin/banners/save' . $banner[0]->id); ?>" method="POST">
     <div class="flex column">
         <label>
             Título

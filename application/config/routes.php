@@ -52,13 +52,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 // Rotas app
 $route['login'] = "main/login";
 $route['login/send'] = "main/login_send";
+
 $route['admin'] = "main/admin";
-$route['admin/banner/editar/(:any)'] = "main/banner/$1";
-$route['admin/depoimento/editar/(:any)'] = "main/testimony/$1";
-$route['admin/parceiro/editar/(:any)'] = "main/partner/$1";
+$route['admin/banners/editar/(:any)'] = "main/banner/$1";
+$route['admin/depoimentos/editar/(:any)'] = "main/testimony/$1";
+$route['admin/parceiros/editar/(:any)'] = "main/partner/$1";
+
+$route['admin/depoimentos/salvar/(:any)'] = "main/testimony_save/$1";
+
 $route['admin/lista/(:any)'] = "main/list/$1";
-$route['lista/delete/(:any)'] = "main/list_delete/$1";
-$route['lista/insert/(:any)'] = "main/list_add/$1";
+$route['admin/lista/(:any)/delete/(:num)'] = "main/list_delete/$1/$2";
 
 $route['default_controller'] = 'main';
 $route['404_override'] = '';
