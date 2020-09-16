@@ -80,14 +80,29 @@ class Main extends CI_Controller {
 				case "banners":
 					$this->load->model('banner_m');
 					$list = $this->banner_m->get();
+					$links = array(
+						'edit' => 'admin/banner/editar/',
+						'delete' => 'admin/banner/delete/',
+						'new' => 'admin/banner/criar/'
+					);
 				break;
 				case "depoimentos":
 					$this->load->model('testimony_m');
 					$list = $this->testimony_m->get();
+					$links = array(
+						'edit' => 'admin/depoimento/editar/',
+						'delete' => 'admin/depoimento/delete/',
+						'new' => 'admin/depoimento/criar/'
+					);
 				break;
 				case "parceiros":
 					$this->load->model('partner_m');
 					$list = $this->partner_m->get();
+					$links = array(
+						'edit' => 'admin/parceiro/editar/',
+						'delete' => 'admin/parceiro/delete/',
+						'new' => 'admin/parceiro/criar/'
+					);
 				break;
 				default:
 					$this->load->model('banner_m');
@@ -100,8 +115,57 @@ class Main extends CI_Controller {
 				'title' => $page,
 				'container' => 'list',
 				'list' => $list,
+				'links' => $links,
 				'user' => $_SESSION['user']
 			));		
 		}
+	}
+
+	public function banner($id){
+		
+		if($id){
+			$this->load->model('banner_m');
+			$banner = $this->banner_m->get($id);
+		}
+
+		$this->load->view('main', array(
+			'content' => 'admin',
+			'title' => "Banners",
+			'container' => 'form-banner',
+			'banner' => $banner,
+			'user' => $_SESSION['user']
+		));	
+	}
+
+	public function testimony($id){
+		
+		if($id){
+			$this->load->model('testimony_m');
+			$testimony = $this->testimony_m->get($id);
+		}
+
+		$this->load->view('main', array(
+			'content' => 'admin',
+			'title' => "Depoimentos",
+			'container' => 'form-testimony',
+			'testimony' => $testimony,
+			'user' => $_SESSION['user']
+		));	
+	}
+
+	public function partner($id){
+		
+		if($id){
+			$this->load->model('partner_m');
+			$partner = $this->partner_m->get($id);
+		}
+
+		$this->load->view('main', array(
+			'content' => 'admin',
+			'title' => "Parceiros",
+			'container' => 'form-partner',
+			'partner' => $partner,
+			'user' => $_SESSION['user']
+		));	
 	}
 }

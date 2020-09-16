@@ -24,7 +24,12 @@ INSERT INTO `file` (`file`, `path`, `extension`) VALUES
 ('customer-2.png',	'assets/img',	'png'),
 ('customer-3.png',	'assets/img',	'png'),
 ('customer-4.png',	'assets/img',	'png'),
-('customer-5.png',	'assets/img',	'png');
+('customer-5.png',	'assets/img',	'png'),
+('customer-6.png',	'assets/img',	'png'),
+('customer-7.png',	'assets/img',	'png'),
+('customer-8.png',	'assets/img',	'png'),
+('customer-9.png',	'assets/img',	'png'),
+('customer-10.png',	'assets/img',	'png');
 
 CREATE TABLE `banner` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -61,11 +66,11 @@ INSERT INTO `partner` (`imageId`, `name`, `description`, `url`) VALUES
 ('10',	'Andreazza', '', 'https://superandreazza.com.br/'),
 ('11',	'Cargo Center', '', 'http://www.cargocenter.com.br/'),
 ('12',	'Casa Perini', '', 'https://www.casaperini.com.br/'),
-('8',	'Arke', '', 'https://www.arke.com.br/'),
-('9',	'Aspock', '', 'http://www.aspock.com.br/'),
-('10',	'Andreazza', '', 'https://superandreazza.com.br/'),
-('11',	'Cargo Center', '', 'http://www.cargocenter.com.br/'),
-('12',	'Casa Perini', '', 'https://www.casaperini.com.br/');
+('13',	'Dfsul', '', 'http://www.dfsul.com.br/'),
+('14',	'Murialdo', '', 'http://www.colegiomurialdo.com.br/caxias-do-sul'),
+('15',	'Gedore', '', 'https://gedore.com.br/'),
+('16',	'Iguatemi', '', 'https://www.iguatemicaxias.com.br/'),
+('17',	'Kepler', '', 'https://www.kepler.com.br/');
 
 CREATE TABLE `testimony` (
   `id` int(11) NOT NULL AUTO_INCREMENT,

@@ -25,7 +25,7 @@
         <div class="header-admin flex justify-between v-center">
             <h2 class="title-admin"><?php if(isset($title)) echo $title; ?></h2>
 
-            <a href="<?php echo base_url() ?>">
+            <a href="<?php echo base_url() ?>" target="_blank">
                 <span class="logo">
                     Ricardo </br> Pellicioli
                 </span>

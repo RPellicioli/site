@@ -16,11 +16,11 @@
 				</p>
 
 				<div class="buttons flex v-center">
-                    <a class="button edit">
+                    <a href="<?php echo base_url($links["edit"] . $item->id); ?>" class="button edit">
                         Editar
                     </a>
 
-                    <a class="button delete">
+                    <a href="<?php echo base_url($links["delete"] . $item->id); ?>" class="button delete">
                         Excluir
                     </a>
                 </div>

@@ -171,6 +171,14 @@ label{
 	margin-bottom: 8px;
 }
 
+.common-form{
+	width: 50%;
+}
+
+.common-form > .buttons{
+	width: 100%;
+}
+
 .input{
 	width: calc(100% - 16px);
 	font-size:1rem;
@@ -179,6 +187,18 @@ label{
 	margin-bottom: 16px;
 	outline: none;
 	color:#646464;
+}
+
+.textarea{
+	width: calc(100% - 16px);
+	height: 250px;
+	font-size:1rem;
+	padding: 14px 8px;
+	border: 1px solid #CCC;
+	margin-bottom: 16px;
+	outline: none;
+	color:#646464;
+	font-family: 'Barlow',sans-serif;
 }
 
 .box-buttons{
@@ -646,15 +666,18 @@ label{
 /* ADMIN */
 
 .menu-admin{
-	width: 300px;
+	width: 13%;
+	min-width: 200px;
 	height: 100vh;
 	background: #A7C6FF;
 	box-shadow: 3px 2px 13px 0px rgba(0,0,0,0.37);
 }
 
 .content-admin{
+	height: 100vh;
 	padding: 32px;
 	flex: 1;
+	box-sizing: border-box;
 }
 
 .title-admin-menu{
@@ -670,6 +693,11 @@ label{
 	border-bottom: 1px solid #CCC;
 	padding-bottom: 16px;
 	margin-bottom: 32px;
+}
+
+.container{
+	height: calc(100% - 100px);
+	overflow-y: auto;
 }
 
 .ul-menu-admin{
@@ -715,6 +743,7 @@ label{
 }
 
 .button{
+	margin-bottom: 12px;
 	border-radius: 4px;
 	border:none;
 	box-shadow: 0 2px 4px rgba(0,0,0,.5);
@@ -731,12 +760,25 @@ label{
 .edit{
 	margin-right: 12px;
 	background: #3F51B5;
-	color: #fff;
+	color: #fff !important;
 }
 
 .delete {
 	background: #F44336;
-	color: #fff;
+	color: #fff !important;
+}
+
+.save{
+	background: #3F51B5;
+	color: #fff !important;
+}
+
+.margin-top-24{
+	margin-top: 24px;
+}
+
+.preview-image-form{
+	width: 300px;
 }
 
 /* buttons */
