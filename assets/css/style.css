@@ -767,6 +767,15 @@ label{
 	transform: translateY(-2px);
 }
 
+.add{
+	width: 80px;
+	display: flex;
+	justify-content: center;
+	margin: 8px 0px 16px 0px;
+	background: #70e78c;
+	color: #fff !important;
+}
+
 .edit{
 	margin-right: 12px;
 	background: #3F51B5;

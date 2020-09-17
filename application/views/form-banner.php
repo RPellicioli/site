@@ -1,9 +1,9 @@
-<form class="common-form" action="<?php echo base_url('admin/banners/save' . $banner[0]->id); ?>" method="POST">
+<form class="common-form" action="<?php $id = ""; if(isset($banner)) $id = "/".$banner[0]->id; echo base_url('admin/banners/salvar' . $id); ?>" method="POST" enctype="multipart/form-data">
     <div class="flex column">
         <label>
             Título
         </label>
-        <input type="email" id="email" name="email" value="<?php if(isset($banner)) echo $banner[0]->name; ?>" class="input" autocomplete="off" />
+        <input type="text" id="name" name="name" value="<?php if(isset($banner)) echo $banner[0]->name; ?>" class="input" autocomplete="off" />
     </div>
 
     <?php if(isset($banner)) { ?> <img src="<?php echo base_url('assets/img/' . $banner[0]->file); ?>" class="preview-image-form" alt="image" /> <?php } ?>

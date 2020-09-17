@@ -55,9 +55,12 @@ $route['login/send'] = "main/login_send";
 
 $route['admin'] = "main/admin";
 $route['admin/banners/editar/(:any)'] = "main/banner/$1";
+$route['admin/banners/criar'] = "main/banner";
 $route['admin/depoimentos/editar/(:any)'] = "main/testimony/$1";
 $route['admin/parceiros/editar/(:any)'] = "main/partner/$1";
 
+$route['admin/banners/salvar/(:any)'] = "main/banner_save/$1";
+$route['admin/banners/salvar'] = "main/banner_save";
 $route['admin/depoimentos/salvar/(:any)'] = "main/testimony_save/$1";
 
 $route['admin/lista/(:any)'] = "main/list/$1";

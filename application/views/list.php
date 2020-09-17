@@ -5,6 +5,10 @@
         </div>
     <?php } ?>
 
+    <a href="<?php echo base_url($links["new"]); ?>" class="button add">
+        Adicionar
+    </a>
+
     <header class="flex header-list-admin justify-start v-center">
         <div class="w-80">
             Título

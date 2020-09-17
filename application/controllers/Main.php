@@ -144,8 +144,9 @@ class Main extends CI_Controller {
 		$this->list($page, "Deletado com sucesso!");	
 	}
 
-	public function banner($id){
-		
+	public function banner($id = FALSE){
+		$banner = null;
+
 		if($id){
 			$this->load->model('banner_m');
 			$banner = $this->banner_m->get($id);
@@ -160,8 +161,59 @@ class Main extends CI_Controller {
 		));	
 	}
 
-	public function testimony($id){
+	public function banner_save($id = FALSE){
+		$data = $this->input->post();
+		$file = $_FILES['file'];
+
+		$config = array(
+		    'upload_path'   => './assets/img',
+		    'allowed_types' => 'jpg|png',
+		    'file_name'     => $file['name'],
+		    'max_size'      => '1480'
+		);
+		$this->load->library('upload');
+		$this->upload->initialize($config);
+
+		if ($file["name"] != "" && $this->upload->do_upload('file')){
+			$this->load->model('file_m');
+
+			$imageId = $this->file_m->insert(array(
+				'file' => $file['name'],
+				'path' => 'assets/img',
+				'extension' => 'jpg'
+			));
+		}
 		
+		$this->load->model('banner_m');
+
+		if($id){
+			$oldBanner = $this->banner_m->get($id);
+
+			if(!isset($imageId) && array_key_exists("imageId", $oldBanner)){
+				$imageId = $oldBanner['imageId'];
+			}
+			else if(!isset($imageId)){
+				$imageId = NULL;
+			}
+
+			$this->banner_m->update(array(
+				'imageId' => $imageId,
+				'name' => $data['name']
+			), $id);
+		}
+		else{
+			$this->banner_m->insert(array(
+				'imageId' => $imageId,
+				'name' => $data['name']
+			));
+		}
+
+		$this->list("banners", "Salvo com sucesso!");
+	}
+
+	public function testimony($id = FALSE){
+		$testimony = null;
+
 		if($id){
 			$this->load->model('testimony_m');
 			$testimony = $this->testimony_m->get($id);
@@ -191,8 +243,9 @@ class Main extends CI_Controller {
 		$this->list("depoimentos", "Salvo com sucesso!");
 	}
 
-	public function partner($id){
-		
+	public function partner($id = FALSE){
+		$partner = null;
+
 		if($id){
 			$this->load->model('partner_m');
 			$partner = $this->partner_m->get($id);
