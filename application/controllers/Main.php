@@ -259,4 +259,59 @@ class Main extends CI_Controller {
 			'user' => $_SESSION['user']
 		));	
 	}
+
+	public function patner_save($id = FALSE){
+		$data = $this->input->post();
+		$file = $_FILES['file'];
+
+		$config = array(
+		    'upload_path'   => './assets/img',
+		    'allowed_types' => 'jpg|png',
+		    'file_name'     => $file['name'],
+		    'max_size'      => '1480'
+		);
+		$this->load->library('upload');
+		$this->upload->initialize($config);
+
+		if ($file["name"] != "" && $this->upload->do_upload('file')){
+			$this->load->model('file_m');
+
+			$imageId = $this->file_m->insert(array(
+				'file' => $file['name'],
+				'path' => 'assets/img',
+				'extension' => 'jpg'
+			));
+		}
+		
+		$this->load->model('partner_m');
+
+		if($id){
+			$oldPartner = $this->partner_m->get($id);
+
+			if(!isset($imageId) && array_key_exists("imageId", $oldPartner)){
+				$imageId = $oldPartner['imageId'];
+			}
+			else if(!isset($imageId)){
+				$imageId = NULL;
+			}
+
+			$this->partner_m->update(array(
+				'imageId' => $imageId,
+				'name' => $data['name'],
+				'description' => $data['description'],
+				'url' => $data['url']
+			), $id);
+		}
+		else{
+			$this->partner_m->insert(array(
+				'imageId' => $imageId,
+				'name' => $data['name'],
+				'description' => $data['description'],
+				'url' => $data['url']
+			));
+		}
+
+		$this->list("parceiros", "Salvo com sucesso!");
+	}
+
 }
