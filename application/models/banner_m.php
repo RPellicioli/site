@@ -8,7 +8,7 @@ class Banner_m extends CI_Model {
 
     function get($id = FALSE){
 
-        $this->db->select('banner.id, banner.name, file.file, file.path')
+        $this->db->select('banner.id, banner.name, file.id as imageId, file.file, file.path')
             ->from($this->table.' as banner')
             ->join($this->table_file.' as file', 'banner.imageId'.' = file.id', 'left')
             ->order_by('banner.name', 'ASC');

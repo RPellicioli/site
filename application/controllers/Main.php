@@ -189,8 +189,8 @@ class Main extends CI_Controller {
 		if($id){
 			$oldBanner = $this->banner_m->get($id);
 
-			if(!isset($imageId) && array_key_exists("imageId", $oldBanner)){
-				$imageId = $oldBanner['imageId'];
+			if(!isset($imageId) && $oldBanner[0]->imageId){
+				$imageId = $oldBanner[0]->imageId;
 			}
 			else if(!isset($imageId)){
 				$imageId = NULL;
