@@ -8,7 +8,7 @@ class Partner_m extends CI_Model {
 
     function get($id = FALSE){
 
-        $this->db->select('partner.id, partner.name, partner.description, partner.url, file.file, file.path')
+        $this->db->select('partner.id, partner.name, partner.description, partner.url, file.id as imageId, file.file, file.path')
             ->from($this->table.' as partner')
             ->join($this->table_file.' as file', 'partner.imageId'.' = file.id', 'left')
             ->order_by('partner.id', 'ASC');
@@ -38,12 +38,10 @@ class Partner_m extends CI_Model {
     {
         $this->db->trans_start();
 
-        $imageId = 10;
-
         $sql = $this->db->insert(
             $this->table,
             array(
-                'imageId' => $imageId,
+                'imageId' => $data['imageId'],
                 'name' => $data['name'],
                 'description' => $data['description'],
                 'url' => $data['url']
@@ -59,14 +57,12 @@ class Partner_m extends CI_Model {
     public function update($data, $id)
     {
         $this->db->trans_start();
-
-        $imageId = 10;
         
         $this->db->where('id', $id);
         $this->db->update(
             $this->table,
             array(
-                'imageId' => $imageId,
+                'imageId' => $data['imageId'],
                 'name' => $data['name'],
                 'description' => $data['description'],
                 'url' => $data['url']

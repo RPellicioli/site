@@ -8,20 +8,10 @@
             Vamos criar algo incrível juntos?
         </h3>   
 
-        <a href="#" class="btn-contact flex justify-start v-center">
+        <a href="https://api.whatsapp.com/send?phone=15551234567" target="_blank" class="btn-contact flex justify-start v-center">
             <img src="<?php echo base_url('assets/img/send.svg') ?>" />
             <span>Entre em contato</span>
-        </a>  
-
-        <form class="form-contact" action="POST">
-            <span>Acompanhe nossas novidades, deixe seu e-mail</span>
-            <div class="box-input">
-                <input placeholder="Seu melhor e-mail?" type="text" name="email" id="email">
-                <button type="submit">
-                    <img src="<?php echo base_url('assets/img/arrow-right.svg') ?>" />
-                </button>
-            </div>	
-        </form>     
+        </a>    
     </div>
 
     <div id="footer-right" class="flex column justify-start v-start">

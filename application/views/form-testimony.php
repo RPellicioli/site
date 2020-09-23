@@ -1,4 +1,4 @@
-<form class="common-form" action="<?php echo base_url('admin/depoimentos/salvar/' . $testimony[0]->id); ?>" method="POST" enctype="multipart/form-data">
+<form class="common-form" action="<?php $id = ""; if(isset($testimony)) $id = "/".$testimony[0]->id; echo base_url('admin/depoimentos/salvar' . $id); ?>" method="POST" enctype="multipart/form-data">
     <div class="flex column">
         <label>
             Nome

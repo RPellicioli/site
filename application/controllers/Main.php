@@ -145,20 +145,22 @@ class Main extends CI_Controller {
 	}
 
 	public function banner($id = FALSE){
-		$banner = null;
+		if($this->logged()){
+			$banner = null;
 
-		if($id){
-			$this->load->model('banner_m');
-			$banner = $this->banner_m->get($id);
+			if($id){
+				$this->load->model('banner_m');
+				$banner = $this->banner_m->get($id);
+			}
+
+			$this->load->view('main', array(
+				'content' => 'admin',
+				'title' => "Banners",
+				'container' => 'form-banner',
+				'banner' => $banner,
+				'user' => $_SESSION['user']
+			));	
 		}
-
-		$this->load->view('main', array(
-			'content' => 'admin',
-			'title' => "Banners",
-			'container' => 'form-banner',
-			'banner' => $banner,
-			'user' => $_SESSION['user']
-		));	
 	}
 
 	public function banner_save($id = FALSE){
@@ -212,20 +214,22 @@ class Main extends CI_Controller {
 	}
 
 	public function testimony($id = FALSE){
-		$testimony = null;
+		if($this->logged()){
+			$testimony = null;
 
-		if($id){
-			$this->load->model('testimony_m');
-			$testimony = $this->testimony_m->get($id);
+			if($id){
+				$this->load->model('testimony_m');
+				$testimony = $this->testimony_m->get($id);
+			}
+
+			$this->load->view('main', array(
+				'content' => 'admin',
+				'title' => "Depoimentos",
+				'container' => 'form-testimony',
+				'testimony' => $testimony,
+				'user' => $_SESSION['user']
+			));	
 		}
-
-		$this->load->view('main', array(
-			'content' => 'admin',
-			'title' => "Depoimentos",
-			'container' => 'form-testimony',
-			'testimony' => $testimony,
-			'user' => $_SESSION['user']
-		));	
 	}
 
 	public function testimony_save($id = FALSE){
@@ -244,23 +248,25 @@ class Main extends CI_Controller {
 	}
 
 	public function partner($id = FALSE){
-		$partner = null;
+		if($this->logged()){
+			$partner = null;
 
-		if($id){
-			$this->load->model('partner_m');
-			$partner = $this->partner_m->get($id);
+			if($id){
+				$this->load->model('partner_m');
+				$partner = $this->partner_m->get($id);
+			}
+
+			$this->load->view('main', array(
+				'content' => 'admin',
+				'title' => "Parceiros",
+				'container' => 'form-partner',
+				'partner' => $partner,
+				'user' => $_SESSION['user']
+			));
 		}
-
-		$this->load->view('main', array(
-			'content' => 'admin',
-			'title' => "Parceiros",
-			'container' => 'form-partner',
-			'partner' => $partner,
-			'user' => $_SESSION['user']
-		));	
 	}
 
-	public function patner_save($id = FALSE){
+	public function partner_save($id = FALSE){
 		$data = $this->input->post();
 		$file = $_FILES['file'];
 
@@ -287,9 +293,9 @@ class Main extends CI_Controller {
 
 		if($id){
 			$oldPartner = $this->partner_m->get($id);
-
-			if(!isset($imageId) && array_key_exists("imageId", $oldPartner)){
-				$imageId = $oldPartner['imageId'];
+			
+			if(!isset($imageId) && $oldPartner[0]->imageId){
+				$imageId = $oldPartner[0]->imageId;
 			}
 			else if(!isset($imageId)){
 				$imageId = NULL;

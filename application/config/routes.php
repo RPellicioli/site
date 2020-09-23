@@ -54,14 +54,21 @@ $route['login'] = "main/login";
 $route['login/send'] = "main/login_send";
 
 $route['admin'] = "main/admin";
+
 $route['admin/banners/editar/(:any)'] = "main/banner/$1";
 $route['admin/banners/criar'] = "main/banner";
-$route['admin/depoimentos/editar/(:any)'] = "main/testimony/$1";
-$route['admin/parceiros/editar/(:any)'] = "main/partner/$1";
-
 $route['admin/banners/salvar/(:any)'] = "main/banner_save/$1";
 $route['admin/banners/salvar'] = "main/banner_save";
+
+$route['admin/depoimentos/editar/(:any)'] = "main/testimony/$1";
+$route['admin/depoimentos/criar'] = "main/testimony";
 $route['admin/depoimentos/salvar/(:any)'] = "main/testimony_save/$1";
+$route['admin/depoimentos/salvar'] = "main/testimony_save";
+
+$route['admin/parceiros/editar/(:any)'] = "main/partner/$1";
+$route['admin/parceiros/criar'] = "main/partner";
+$route['admin/parceiros/salvar/(:any)'] = "main/partner_save/$1";
+$route['admin/parceiros/salvar'] = "main/partner_save";
 
 $route['admin/lista/(:any)'] = "main/list/$1";
 $route['admin/lista/(:any)/delete/(:num)'] = "main/list_delete/$1/$2";
